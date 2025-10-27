@@ -1,0 +1,61 @@
+
+:root{
+  --bg:#0b0b0b;
+  --panel:#0f0f0f;
+  --gold:#C4972D;
+  --green:#00A86B;
+  --white:#ffffff;
+  --muted:#cfcfcf;
+  --max-width:1100px;
+  --radius:8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+.site-header{border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-size:20px;letter-spacing:1px}
+.tag{margin:0;font-size:12px;color:var(--muted)}
+
+.nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+.nav a:hover{color:var(--white)}
+
+.hero{padding:48px 0;background:
+  linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.6));
+}
+.hero-inner{display:flex;gap:24px;align-items:center}
+.hero-text{flex:1}
+.hero-text h2{font-size:34px;margin:0 0 12px;color:var(--white)}
+.lead{color:var(--muted);margin-bottom:16px}
+.btn{display:inline-block;background:var(--green);color:var(--white);padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:600}
+.btn.small{padding:8px 12px;font-size:14px}
+
+.hero-image img{max-width:320px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+.about{padding:36px 0;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-top:1px solid rgba(255,255,255,0.02)}
+
+.shop{padding:36px 0}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.product{background:var(--panel);padding:14px;border-radius:10px;text-align:center}
+.product img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+.product h4{margin:10px 0 6px}
+.price{color:var(--gold);font-weight:700;margin-bottom:8px}
+
+.slogan{padding:32px 0;text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
+.slogan h3{margin:0;font-size:22px;color:var(--gold)}
+
+.contact{padding:28px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.socials a{display:inline-block;margin-right:12px;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
+.socials a:hover{color:var(--white);border-color:var(--green)}
+
+.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted);font-size:13px}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero-inner{flex-direction:column;text-align:center}
+  .hero-image img{max-width:260px}
+  .nav{display:none}
+}
